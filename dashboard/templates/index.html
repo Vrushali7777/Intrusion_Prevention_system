@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI IPS Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Intrusion Prevention System</h1>
+
+<h2>Blocked Attacks</h2>
+
+<ul class="attack-list">
+
+{% for log in logs %}
+<li>{{log}}</li>
+{% endfor %}
+
+</ul>
+
+</div>
+
+</body>
+</html>
